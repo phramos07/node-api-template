@@ -1,0 +1,41 @@
+{
+    "api": {
+        "name": "BLiP-iCustomer",
+        "version": "v1",
+        "authToken": "root",
+        "baseRoute": "/api",
+        "swaggerDefinitions": {
+            "route": "/",
+            "basicAuth": "global",
+            "type": "apiKey",
+            "in": "query",
+            "name": "accessToken"
+        }
+    },
+    "seq": {
+        "url": "http://hmg-az-cs-seq.take.net:5341/",
+        "key": "xH5Tm6nbWbMyA6jJ72ng",
+        "level": "info"
+    },
+    "blip": {
+        "msgingUrl": "https://http.msging.net"
+    },
+    "bot": {
+        "key": "Key bmVzdGxlZG9sY2VndXN0b2JldGE6b1AxWjFDNlhuQkkwRTFDNXdBdHg=",
+        "flowId": "887621db-7adc-4618-b0c8-c9d946c42873",
+        "attendanceStartId": "b23dbe1e-838a-4987-99ef-787dd6f02104",
+        "attendanceEndId": "ea3aba9a-b15d-4282-83e8-4d38319896d8",
+        "surveyMessage": "Antes da gente finalizar, conta para mim como foi sua experiência. 😄\n\nEm uma escala de 0 a 10, qual nota você daria para este atendimento?\n\nDigite apenas o número da nota 😉"
+    },
+    "iCustomer": {
+        "url": "https://ic-api.plusoft.com.br/api/v2/messengers",
+        "pageId": "103974361285288",
+        "authorization": "Bearer 75b5c04ffea24da693e4eec139914288"
+    },
+    "defaultContact": {
+        "name": "anonymous (iCustomer external)",
+        "offset": -3.0,
+        "culture": "pt-BR",
+        "source": "Messenger"
+    }
+}

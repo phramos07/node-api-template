@@ -1,0 +1,31 @@
+{
+  "name": "blip-icustomer",
+  "version": "1.0.0",
+  "description": "BLiP-iCustomer Integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "dev": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "bunyan": "^1.8.12",
+    "bunyan-seq": "^0.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "redis": "^2.8.0",
+    "swagger-jsdoc": "^3.4.0",
+    "swagger-ui-express": "^4.1.2",
+    "uuid": "^7.0.3",
+    "http-status-codes": "^1.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "nodemon": "^2.0.2",
+    "eslint": "^6.8.0"
+  }
+}

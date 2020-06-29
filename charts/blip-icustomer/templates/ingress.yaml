@@ -1,0 +1,28 @@
+{{- if .Values.ingress.enabled -}}
+{{- $fullName := include "blip-icustomer.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ template "blip-icustomer.fullname" . }}-{{ .Values.environment.stage }}
+  labels:
+    app: {{ template "blip-icustomer.name" . }}
+    chart: {{ template "blip-icustomer.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- with .Values.ingress.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+  rules:
+    - host: {{ .Values.ingress.hostName }}
+      http:
+        paths:
+          - backend:
+              serviceName: {{ template "blip-icustomer.fullname" . }}-{{ .Values.environment.stage }}
+              servicePort: http
+  tls: 
+    - secretName: {{ .Values.ingress.tls.secretName }}
+      hosts:
+        - {{ .Values.ingress.hostName }}
+{{- end }}
