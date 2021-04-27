@@ -17,7 +17,7 @@
     "bunyan-seq": "^0.4.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "swagger-jsdoc": "^3.4.0",
     "swagger-ui-express": "^4.1.2",
     "uuid": "^7.0.3",
